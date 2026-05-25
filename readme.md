@@ -20,3 +20,17 @@ Example:
         Data Table
         |username|password|
         |abdissivanesh|abcdefghijklmno|
+
+
+Design patterns:
+
+design patterns are used to handle the common things
+like object, and pages
+
+object manager
+page factory 
+single tone
+POM
+Lazy page object patern
+Dependency injections
+

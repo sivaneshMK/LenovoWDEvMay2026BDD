@@ -1,0 +1,2 @@
+application is launched successfully
+Test pass
