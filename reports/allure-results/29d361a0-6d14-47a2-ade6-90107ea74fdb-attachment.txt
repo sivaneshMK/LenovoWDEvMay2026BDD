@@ -1,0 +1,3 @@
+application is launched successfully
+test_verify_user_can_able_to_unlock_the_account
+Test pass

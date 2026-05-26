@@ -34,3 +34,16 @@ POM
 Lazy page object patern
 Dependency injections
 
+
+Predefined fixture
+===================
+request --> access current test /scenario context
+pytestbdd_stepdef_given --> current given step
+pytestbdd_stepdef_when
+pytestbdd_stepdef_then
+pytestdbb_stepfunc_args --> access resolved step arguments
+pytestbdd_step_params --> scenario outline example values
+pytestdbb_step_name --> current step name
+pytestbdd_scenario --> current scenario
+pytestbdd_feature_base_dir --> base feature directory
+

@@ -5,7 +5,7 @@ from selenium import webdriver
 from pages.home_page import HomePage
 
 
-@pytest.fixture()
+@pytest.fixture(scope="function")
 def driver():
     driver = webdriver.Chrome()
     driver.get("https://www.lenovo.com/")
@@ -26,9 +26,18 @@ def pytest_runtest_makereport(item, call):
     report = outcome.get_result()
     if report.when == "call" and report.failed:
         driver = item.funcargs.get("driver")
-        if driver:
-            allure.attach(
-                driver.get_screenshot_as_png(),
-                name="Failure_Screenshot",
-                attachment_type= allure.attachment_type.PNG
-            )
+        #driver = getattr(item, "driver")
+        print("The driver is not closed")
+        try:
+            if driver:
+                path = "C:\\Users\\sivan\\PycharmProjects\\Lenovo_BDD_MayWD2026\\screenshots\\screenshot.png"
+                driver.save_screenshot(path)
+                allure.attach(
+                    path,
+                    name="Failure_Screenshot",
+                    attachment_type= allure.attachment_type.PNG
+
+                )
+                print("attached the screenshots in to the report")
+        except Exception as e:
+            print(f"Couldn't able to attach the screenshots {e}")
