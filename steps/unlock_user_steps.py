@@ -72,3 +72,11 @@ def fun(pages, product_name):
     #pages.home_page.enter_search_string(product_name)
     pages.home_page.enter_search_string(test_data.get_test_data("product_name"))
     time.sleep(10)
+
+@given(parsers.parse("user credentials"))
+def fun(datatable):
+    print(datatable)
+
+@when(parsers.parse('enter "{username}" "{password}"'))
+def fun(username, password):
+    print(username, password)

@@ -1,0 +1,2 @@
+application is launched successfully
+test_login_with_valid_credentials

@@ -47,3 +47,12 @@ pytestdbb_step_name --> current step name
 pytestbdd_scenario --> current scenario
 pytestbdd_feature_base_dir --> base feature directory
 
+
+{
+username:"karthi"
+email: "karthi@gmail.com"
+
+}
+
+poetry
+micro services --> contract testing

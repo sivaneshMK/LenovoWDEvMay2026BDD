@@ -1,0 +1,2 @@
+application is launched successfully
+test_verify_user_is_able_to_search_a_product[Monitor]
